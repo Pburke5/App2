@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -19,15 +20,23 @@ import com.android.volley.toolbox.Volley;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import android.content.Intent;
+import android.R;
 
 
 public class NBA411Main extends AppCompatActivity {
 
-    private Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Button btn = findViewById(R.id.open);
 
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(NBA411Main.this, search.class));
+            }
+        });
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nba411_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);

@@ -22,7 +22,7 @@ public class HttpBasicAuth {
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");
             connection.setDoOutput(true);
-            connection.setRequestProperty("Authorization", "Basic " + encoding);
+            connection.setRequestProperty("authorization", "Basic " + encoding);
             InputStream content = (InputStream)connection.getInputStream();
             BufferedReader in =
                     new BufferedReader(new InputStreamReader(content));

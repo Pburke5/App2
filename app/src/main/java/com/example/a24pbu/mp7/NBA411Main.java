@@ -22,13 +22,16 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import android.content.Intent;
 import android.R;
+import android.widget.TextView;
 
 
 public class NBA411Main extends AppCompatActivity {
-
+    private TextView mTextViewResult;
+    private RequestQueue mQueue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        
         Button btn = findViewById(R.id.button2);
 
         btn.setOnClickListener(new View.OnClickListener() {
@@ -42,7 +45,7 @@ public class NBA411Main extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.text1); //check for toolbar
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.autofill);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -55,7 +58,7 @@ public class NBA411Main extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_nba411_main, menu);
+        //getMenuInflater().inflate(R.menu.menu_nba411_main, menu);
         return true;
     }
 
@@ -67,9 +70,9 @@ public class NBA411Main extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        /*if (id == R.id.action_settings) {
             return true;
-        }
+        }*/
 
         return super.onOptionsItemSelected(item);
     }

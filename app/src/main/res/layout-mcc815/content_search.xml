@@ -16,7 +16,8 @@
         android:layout_height="58dp"
         android:text="Search"
         tools:layout_editor_absoluteX="150dp"
-        tools:layout_editor_absoluteY="71dp" />
+        tools:layout_editor_absoluteY="71dp"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/editText2"
@@ -54,13 +55,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         tools:layout_editor_absoluteY="130dp"
         tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="53dp"
-        tools:layout_editor_absoluteY="81dp" />
 
 </android.support.constraint.ConstraintLayout>

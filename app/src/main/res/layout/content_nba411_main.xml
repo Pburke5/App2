@@ -15,7 +15,6 @@
         android:layout_width="218dp"
         android:layout_height="162dp"
         android:layout_gravity="center"
-        android:text="Throw"
         android:textAppearance="@android:style/TextAppearance.Large"
         android:textColor="@color/colorPrimaryDark"
         tools:text="NBA 411" />
@@ -24,7 +23,7 @@
         android:id="@+id/button2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/title_activity_search" />
+        android:text="create" />
 
     <EditText
         android:id="@+id/editText"
@@ -41,5 +40,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/nbaplayoffspost" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+
 
 </LinearLayout>

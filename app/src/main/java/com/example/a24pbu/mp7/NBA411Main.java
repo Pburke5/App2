@@ -21,7 +21,6 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 import android.content.Intent;
-import android.R;
 import android.widget.TextView;
 
 
@@ -31,21 +30,21 @@ public class NBA411Main extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        
-        Button btn = findViewById(R.id.button2);
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.content_nba411_main); //check for layout
+
+        Button btn = (Button) findViewById(R.id.button2);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(NBA411Main.this, search.class));
+                startActivity(new Intent(v.getContext(), search.class));
             }
         });
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.list_content); //check for layout
-        Toolbar toolbar = (Toolbar) findViewById(R.id.text1); //check for toolbar
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar); //check for toolbar
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.autofill);
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

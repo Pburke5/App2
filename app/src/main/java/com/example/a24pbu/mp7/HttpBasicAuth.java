@@ -13,7 +13,7 @@ public class HttpBasicAuth {
     public static void main(String[] args) {
 
         try {
-            URL url = new URL ("https://api.mysportsfeeds.com/v1.2/pull/nba/2018-playoff/cumulative_player_stats.json?playerstats=2PA,2PM,3PA,3PM,FTA,FTM");
+            URL url = new URL ("https://api.mysportsfeeds.com/v1.2/pull/nba/2018-playoff/cumulative_player_stats.json");
             String info = "jasonN:ziplocz1";
             byte[] user = info.getBytes();
             Base64.Encoder username = Base64.getEncoder();

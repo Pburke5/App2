@@ -29,7 +29,7 @@ public class NBA411Main extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Button btn = findViewById(R.id.open);
+        Button btn = findViewById(R.id.button2);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,8 +38,8 @@ public class NBA411Main extends AppCompatActivity {
             }
         });
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_nba411_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setContentView(R.layout.list_content); //check for layout
+        Toolbar toolbar = (Toolbar) findViewById(R.id.text1); //check for toolbar
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
